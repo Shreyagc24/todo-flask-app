@@ -6,4 +6,6 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-# Don’t use app.run() when deploying to Render
+if __name__ == "__main__":
+    app.run(debug=True)
+    
