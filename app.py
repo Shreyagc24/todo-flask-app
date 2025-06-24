@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate  # NEW
 
 app = Flask(__name__)
 
@@ -9,7 +8,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///tasks.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
-migrate = Migrate(app, db)  # NEW: connect app with migrate
 
 # Model
 class Task(db.Model):
@@ -44,3 +42,9 @@ def delete(id):
     db.session.delete(task)
     db.session.commit()
     return redirect('/')
+
+if __name__ == '__main__':
+    # Create database tables if not exist (without migrations)
+    with app.app_context():
+        db.create_all()
+    app.run(debug=True)
