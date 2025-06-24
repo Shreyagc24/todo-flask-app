@@ -28,7 +28,7 @@ source venv/bin/activate
 3.Install dependencies:
 pip install -r requirements.txt
 
-⚙️ Deployment Notes
+# ⚙️Deployment Notes
 This app uses gunicorn for production WSGI server. Render or any other hosting provider can run:
 gunicorn app:app
 
