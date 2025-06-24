@@ -1,3 +1,4 @@
+/* Base body styling */
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f2f5;
@@ -6,63 +7,82 @@ body {
   text-align: center;
 }
 
+/* Centered container */
 .container {
-  margin-top: 50px;
+  margin: 50px auto;
   max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
   background: white;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Input box styling */
 input[type="text"] {
   padding: 10px;
-  width: 70%;
+  width: 65%;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-size: 16px;
 }
 
+/* Add button styling */
 button#add-task {
-  padding: 10px 20px;
+  padding: 10px 18px;
   margin-left: 10px;
   border: none;
   background-color: #28a745;
   color: white;
   border-radius: 5px;
+  font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
+button#add-task:hover {
+  background-color: #218838;
+}
+
+/* List styling */
 ul#todo-list {
   list-style: none;
   padding: 0;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
+/* Each task item */
 .todo-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10px 0;
-  padding: 8px;
-  background: #fafafa;
+  margin-bottom: 12px;
+  padding: 12px 15px;
+  background: #fdfdfd;
   border: 1px solid #ddd;
   border-radius: 5px;
+  transition: background 0.3s ease;
 }
 
+.todo-item:hover {
+  background: #f5f5f5;
+}
+
+/* Task text */
 .task-text {
   flex: 1;
   text-align: left;
-  padding: 0 10px;
+  font-size: 16px;
+  color: #333;
 }
 
 .task-text.completed {
   text-decoration: line-through;
-  color: gray;
+  color: #888;
 }
 
-.complete-btn, .delete-btn {
+/* Icon buttons */
+.complete-btn,
+.delete-btn {
   background: none;
   border: none;
   cursor: pointer;
@@ -70,5 +90,10 @@ ul#todo-list {
   margin-left: 10px;
 }
 
-.complete-btn i { color: green; }
-.delete-btn i { color: red; }
+.complete-btn i {
+  color: green;
+}
+
+.delete-btn i {
+  color: red;
+}
