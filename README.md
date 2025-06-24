@@ -17,3 +17,18 @@ This is a simple web-based To-Do List application built using:
    ```bash
    git clone https://github.com/Shreyagc24/todo-flask-app.git
    cd todo-flask-app
+
+2.Create and activate a virtual environment:
+    python -m venv venv
+# On Windows
+venv\Scripts\activate
+# On macOS/Linux
+source venv/bin/activate
+
+3.Install dependencies:
+pip install -r requirements.txt
+
+⚙️ Deployment Notes
+This app uses gunicorn for production WSGI server. Render or any other hosting provider can run:
+gunicorn app:app
+
