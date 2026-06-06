@@ -1,5 +1,3 @@
-# 📝 To-Do List Web App (Flask + JavaScript)
-
 This is a simple web-based To-Do List application built using:
 - 🐍 Python Flask (Backend)
 - 🖥 HTML/CSS + JavaScript (Frontend)
